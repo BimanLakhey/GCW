@@ -1,0 +1,54 @@
+﻿@model GCW.Models.Loan
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Loan</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Date out
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateOut)
+        </dd>
+        <dt class = "col-sm-2">
+            Date due
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateDue)
+        </dd>
+        <dt class = "col-sm-2">
+            Date returned
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateReturned)
+        </dd>
+        <dt class = "col-sm-2">
+            Loan type
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LoanType.LoanTypeNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            DVD copy
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DVDCopy.CopyNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            Member number
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Member.MemberNumber)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.LoanNumber"><input type="button" value="Edit" class="btn bg-warning text-white"></a>
+</div>
